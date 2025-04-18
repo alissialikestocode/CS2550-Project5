@@ -155,6 +155,16 @@ button:hover {
     background-color: rgb(218, 209, 243);
 }
 
+input[type=text]:focus {
+    outline: none;
+    border: 3px solid #a68dce;
+}
+
+textarea:focus {
+    outline: none;
+    border: 3px solid #a68dce;
+}
+
 input[type=checkbox]+label::before {
     font-size: 1em;
     background-color: whitesmoke;

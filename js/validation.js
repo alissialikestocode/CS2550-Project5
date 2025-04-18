@@ -52,7 +52,7 @@ function submitForm(ev) {
     console.log("in submit");
     let form = ev.currentTarget;
 
-    ev.preventDefault();            // Use these to stop the form from submitting
+    ev.preventDefault();                    // Use these to stop the form from submitting
     ev.stopPropagation();
 
     validateForm();
@@ -147,7 +147,6 @@ function checkRequired(id, message) {
     return valid;
 }
 
-// TODO
 function setElementValidity(id, valid, message) { 
     let el = document.getElementById(id);
 
