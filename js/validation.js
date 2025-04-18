@@ -29,15 +29,18 @@ const stateAbbreviations = [
 // let form = null;
 let successMsg = null;
 
-function initValidation(formId, successId) { 
+function initValidation(formId, successId) {
+
     form = document.getElementById(formId);
     successMsg = document.getElementById(successId);
 
-    let inputs = document.querySelectorAll("input");       
-    for (let input of inputs) {                                 // Add event listeners checking for changes in the form inputs
+    let inputs = document.querySelectorAll("input");
+    for (let input of inputs) {
+
         input.addEventListener("change", inputChanged);
     }
     form.addEventListener("submit", submitForm);
+
 }
 
 function inputChanged(ev) {             // When the input is changed add "was-validated" class to element whose event listener triggered the event
