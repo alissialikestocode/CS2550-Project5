@@ -26,7 +26,7 @@ const stateAbbreviations = [
     'MP', 'OH', 'OK', 'OR', 'PW', 'PA', 'PR', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT',
     'VT', 'VI', 'VA', 'WA', 'WV', 'WI', 'WY'
 ];
-let form = null;
+// let form = null;
 let successMsg = null;
 
 function initValidation(formID, successId) { 
@@ -109,7 +109,7 @@ function validateState(id, msg) {
 
 function checkFormat(id, msg, regex) { 
     let valid = false;
-    let elemVal = getElementById(id).value;
+    let elemVal = document.getElementById(id).value;
     
     const result = regex.test(elemVal);
     if (!result) { 
@@ -133,7 +133,7 @@ function checkRequired(id, message) {
             break;
         
         case 'checkbox':
-            let allCheckboxes = documquerySelectorAll("input[name=find-page]");
+            let allCheckboxes = document.querySelectorAll("input[name=find-page]");
             
             for (let box of allCheckboxes) {
                 if (box.checked) {
@@ -149,9 +149,11 @@ function checkRequired(id, message) {
 
 function setElementValidity(id, valid, message) { 
     let el = document.getElementById(id);
+    let errorDiv = document.getElementById("errorMsg");
 
     if (valid) {                        // It has a value
         el.setCustomValidity('');       // Sets to no error msg and field is valid
+        errorDiv.innerHTML = "";
     }
     else {
         el.setCustomValidity(message);  // Sets error msg and field gets invalid state
