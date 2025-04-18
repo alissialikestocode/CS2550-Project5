@@ -161,7 +161,7 @@ function setElementValidity(id, valid, message) {
     else {
         el.setCustomValidity(message);  // Sets error msg and field gets invalid state
 
-        let errorDiv = document.getElementById("errorMsg");
+        let errorDiv = document.getElementsByClassName("errorMsg");
         errorDiv.innerHTML = "<p>" + message + "</p>";
     }
 }
