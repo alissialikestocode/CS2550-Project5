@@ -8,6 +8,10 @@
 */
 
 // Switch between tabs on page
+
+console.log()
+
+
 function openTab(tabName) {
     var i;
     var x = document.getElementsByClassName("tabs");
@@ -101,6 +105,6 @@ function toggleStylesheet(href, onoff) {
 // Entry point for js validation, happens after everything has been loaded/rendered on page
 document.addEventListener("DOMContentLoaded", function(event) {
     initValidation("myform", "successMsg");
-    event.preventDefault();
-    form.checkValidity();
+    // event.preventDefault();
+    // form.checkValidity();
 });
