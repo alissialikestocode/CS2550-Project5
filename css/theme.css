@@ -1,0 +1,191 @@
+/* 
+    Changes made:
+        --switched order of main and article sections
+        --changed styles and colors
+        --added border radius to photos here, but then decided to add it to main.css
+        --changed menu buttons a bit
+        --moved nav bar to to top of header
+        --added additional toggle functionality to this theme (it's in the JavaScript, but it's for this theme so I think it counts):
+            * color scheme is totally different. I tried to match the feel of the new image keeping the website cohesive, but not
+              a lot of things on the same page are the same color. 
+            * website logo changes and so does it's alt property
+            * website title changes and has a text decoration
+            * changed male actor's photo, alt property, and figcaption label appropriately
+            * different video plays and the text describing it changes too
+            * everything changed reverts appropriately when toggled
+        --media query added
+            * website logo/image and title stack on top of one another
+
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+#header-container {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    border: 3px solid #71608d;
+    /* border-bottom: 3px solid #FAA0A0; */
+    background-color: #a68dce;
+    grid-template-areas: 
+        "nav nav nav nav nav nav nav nav nav nav"
+        "top top top top top top top top top top";  
+}
+
+header img {
+    display: flex;
+    width: 300px;
+    height: auto;
+    margin: 3%;
+    border-radius: 10px;
+}
+
+h1 {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: rgb(103, 49, 71);
+    text-decoration-skip-ink: none;
+}
+
+#header-logo {
+    grid-area: top;
+}
+
+nav {
+    background-color: rgb(240, 210, 222);
+    border-top: 3px solid lightpink;
+    border-bottom: 3px solid #71608d;
+    grid-area: nav;
+    width: 100%;
+    }
+
+button {
+    background-color: rgb(240, 210, 222);
+    border: none;
+    width: 25%;
+}
+
+ button[type=submit] {
+    border: 2px solid #71608d;
+    background-color: #a68dce;
+    
+}
+
+button:hover {
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 15px 40px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid lightpink;
+    background-color: #FAA0A0;
+}
+
+#body-container {
+    background-color: #C3B1E1;
+}
+
+#home-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(6, auto);
+    border: 3px solid #FAA0A0;
+    background-color: rgb(243, 207, 198);
+    padding: 15px;
+    grid-template-areas: "nav nav nav nav nav nav nav nav nav nav"
+        "header header header header header header header header header header"
+        "aside aside aside aside main main main main main main"
+        "aside aside aside aside main main main main main main"
+        "footer footer footer footer footer footer footer footer footer footer"
+ }
+
+#main-container {
+    border: 3px solid rgb(202, 146, 202);
+    background-color: rgb(218, 209, 243);
+}
+
+#aside-container {
+    border: 3px solid rgb(202, 146, 202);
+    background-color: rgb(218, 209, 243);
+}
+
+#synopses-container {
+    border: 3px solid #FAA0A0;
+    background-color: rgb(243, 207, 198);
+}
+
+.descriptions {
+    border: 3px solid rgb(202, 146, 202);
+    background-color: rgb(218, 209, 243);
+}
+
+#contact-me {
+    border: 3px solid #FAA0A0;
+    background-color: rgb(243, 207, 198);
+}
+
+#social {
+    border: 3px solid rgb(202, 146, 202);
+    background-color: rgb(218, 209, 243);
+}
+
+.descriptions>h2,
+#contact-info>h2 {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-style: wavy;
+    text-decoration-color: #FAA0A0; /*pastel red*/
+    text-decoration-skip-ink: none;
+}
+
+.descriptions > h2 {
+    text-decoration-thickness: 4px;
+    text-decoration-style: solid;
+}
+
+/* Form CSS */
+#form-container,
+.container {
+    padding: 15px;
+    border: 3px solid rgb(202, 146, 202);
+}
+
+#form-container {
+    background-color: rgb(243, 207, 198);
+}
+
+.container {
+    background-color: rgb(218, 209, 243);
+}
+
+input[type=checkbox]+label::before {
+    font-size: 1em;
+    background-color: whitesmoke;
+    border: .125em solid lightpink;
+}
+
+input[type=checkbox]:checked+label::before {
+    content: "\2605";
+    color: goldenrod;
+    background: whitesmoke;
+}
+@media (max-width: 768px) {
+    #home-container {
+        grid-template-areas: "header header header header header header header header header header"
+            "nav nav nav nav nav nav nav nav nav nav"
+            "aside aside aside aside aside aside aside aside aside aside"
+            "aside aside aside aside aside aside aside aside aside aside"
+            "main main main main main main main main main main"
+            "main main main main main main main main main main"
+            "footer footer footer footer footer footer footer footer footer footer"
+        }
+
+    #header-logo {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+
+    h1 {
+        justify-self: center;
+        padding-left: 5%;
+    }
+}

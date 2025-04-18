@@ -1,0 +1,397 @@
+<!-- 
+Name: Alissia Austell Huntzinger
+Class: CS2550 - Spring 2025
+Project 4
+Due: 3/28/25
+
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+
+--SELF GRADE--
+REFACTOR CSS-FIX        xA / B / C / D / E
+CSS THEME               xA / B / C / D / E
+CSS THEME TOGGLE        xA / B / C / D / E
+MOBILE RESPONSIVE       xA / B / C / D / E
+
+ADDITIONAL COMMENTS
+I wish the rubric was more clear about whether or not adding/changing things to the theme with JavaScript counts. I feel like I did a 
+lot with the knowledge I have, but part of me is worried that it's going to be wrong or not enough.
+
+--REFLECTION--
+This was fun, and it was cool to see how much my understanding has grown since even earlier this month. Being able to use Javascript
+to add more functionality is kind of addicting. Now I just need to get more experience with images because, while it works, I had *much*
+cooler ideas for my logo and background, but just didn't quite have the knowledge or tools to make them in time.
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/main.js" defer> </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--importing font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
+
+    <title>Okay Drama Queen</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+</head>
+
+<body id="body-container">
+    <header id="header-container">
+        <div id="header-logo">
+            <img id="logo-img" src="images/crown_orig.png" alt="A black crown with three peaks">
+            <h1>Okay Drama Queen!</h1>
+        </div>
+        
+        <!-- <nav class="w3-bar w3-black">
+            <button class="w3-bar-item w3-button" onclick="openTab('home-container')">Home</button>
+            <button class="w3-bar-item w3-button" onclick="openTab('synopses-container')">Synopses</button>
+            <button class="w3-bar-item w3-button" onclick="openTab('contact-me')">Contact Me</button>
+            <button id="themeChange" class="w3-bar-item w3-button">Theme Change</button> -->
+            <!-- <button id="themeChange" class="w3-bar-item w3-button" onclick="toggleStylesheet('theme.css')">Theme Change</button> -->
+        
+        <nav class="button">
+            <button type="button" onclick="openTab('home-container')">Home</button>
+            <button type="button" onclick="openTab('synopses-container')">Synopses</button>
+            <button type="button" onclick="openTab('contact-me')">Contact Me</button>
+            <button type="button" id="themeChange">Theme Change</button>
+            <button type="button" onclick="openTab('form-container')">Log Visit</button>
+        </nav>
+            
+       
+    </header>
+    <!--Holds Homepage Content: rankings and actors to look for-->
+    <section id="home-container" class="tabs">
+        <main id="main-container">
+            <section id="opening-text">
+                <h2>Where to Start with K-Dramas: My Top 5 Recommendations</h2>
+                <p>
+                    Next to BTS (--only 3 more months until they're all home!), one of the Korean cultural exports
+                    everyone's talking
+                    about these days is korean dramas, also known as k-dramas. For those of us who don't have the money
+                    to drop on roundtrip
+                    airfare to Korea, k-dramas are a great way to hear and study the language, learn a little bit about
+                    the culture (I say a tiny bit because
+                    k-dramas are about as real as the tv shows you watch in your own country), and see a
+                    <strong>lot</strong> of delicious-looking food.
+                </p>
+                <p>
+                    K-dramas have a lot of genres and something for everybody, but that's exactly why it can be tricky
+                    to know what to start watching.
+                    Below, I've ranked some of the k-dramas that I've enjoyed and think would be a great introduction to
+                    the experience.
+                    I tend to like more fantasy, slice-of-life, and historical dramas, so that's what you'll mostly see
+                    here. If you like them, then
+                    you'll have a good idea of what to start looking for next.
+                </p>
+            </section>
+            <section id="modern">
+                <h3>Modern K-Dramas:</h3>
+                <p>
+                    These k-dramas happen in modern times, or at least times that don't feel <em>too</em> far past
+                </p>
+                <ol>
+                    <li><a href="https://www.imdb.com/title/tt4799574/" target="_blank">Oh My Ghost!</a></li>
+                    <li><a href="https://www.imdb.com/title/tt13669128/" target="_blank">Doom At Your Service</a></li>
+                    <li><a href="https://www.imdb.com/title/tt12246190/" target="_blank">Mystic Pop-up Bar</a></li>
+                    <li><a href="https://www.imdb.com/title/tt18926162/" target="_blank">Tomorrow</a></li>
+                    <li><a href="https://www.imdb.com/title/tt14482414/" target="_blank">Racket Boys</a></li>
+                </ol>
+            </section>
+            <section id="historical">
+                <h3>Historical K-Dramas:</h3>
+                <p>
+                    These k-dramas tend to happen during the time of the Goreyo and Joseon Dynasties...with one
+                    from the late 1990s.
+                </p>
+                <ol>
+                    <li><a href="https://www.imdb.com/title/tt10406128/" target="_blank">Rookie Historian Goo Hae Ryung</a></li>
+                    <li><a href="https://www.imdb.com/title/tt8199972/" target="_blank">100 Days My Prince</a></li>
+                    <li><a href="https://www.imdb.com/title/tt29274743/" target="_blank">The Matchmakers</a></li>
+                    <li><a href="https://www.imdb.com/title/tt10614024/" target="_blank">Flower Crew: Joseon Marriage Agency</a></li>
+                    <li><a href="https://www.imdb.com/title/tt17513352/" target="_blank">Twenty-Five Twenty-One</a></li>
+                </ol>
+            </section>
+
+            <h5>Check out the Synopses section for more information about each k-drama. You can also click on the drama title
+                to visit it's imdb page.
+            </h5>
+        </main>
+        <aside id="aside-container">
+            <h2>Actors to Look For:</h2>
+            <p>
+                If you see these actors in the promo it's <em>highly</em> likely to be good.
+            </p>
+            <section id="actresses">
+                <h3>Top 3 Female Actors</h3>
+                <section id="actress-content">
+                    <figure class="caption">
+                        <img id="actress-photo" src="images/park_boyoung.jpg" alt="A photo of Park Bo-Young smiling">
+                        <figcaption>Park Bo-Young</figcaption>
+                    </figure>
+                    <ol>
+                        <li><a href="https://www.imdb.com/name/nm3291520/" target="_blank">Park Bo-Young</a></li>
+                        <li><a href="https://www.imdb.com/name/nm9470536/" target="_blank">Yeom Hye-Ran</a></li>
+                        <li><a href="https://www.imdb.com/name/nm3892241/" target="_blank">Kim Tae-Ri</a></li>
+                    </ol>
+                </section>
+            </section>
+            <section id="actors">
+                <h3>Top 3 Male Actors</h3>
+                <section id="actor-content">
+                    <figure class="caption">
+                        <img id="actor-photo" src="images/nam_joo_hyuk3.jpg" rel="A picture of Nam Joo-Hyuk">
+                        <figcaption id="actor-name">Nam Joo-Hyuk</figcaption>
+                    </figure>
+                    <ol>
+                        <li><a href="https://www.imdb.com/name/nm7632185/" target="_blank">Nam Joo-Hyuk</a></li>
+                        <li><a href="https://www.imdb.com/name/nm8044332/" target="_blank">Anh Hyo-Seop</a></li>
+                        <li><a href="https://www.imdb.com/name/nm5364609/" target="_blank">Seo In-Guk</a></li>
+                    </ol>
+                </section>
+            </section>
+        </aside>
+    </section>
+    <!--Holds synopses of k-dramas-->
+    <section id="synopses-container" class="tabs" style="display:none">
+        <section class="descriptions">
+            <h2>Synopses and Where to Watch</h2>
+            <div id="modern-synopses">
+                <h4>Modern</h4>
+                <ul>
+                    <li>
+                        <p>
+                            <strong>Oh My Ghost:</strong> Shin Soon-ae died young and unexpectedly. She wants to move on to
+                            the afterlife, but is stuck on earth until
+                            she can resolve her grudge--by possessing someone's body and doing "the deed". Na Bong-sun is a
+                            shy young woman
+                            working in the restaurant of a famous chef, who she has a crush on, when she unknowingly crosses
+                            paths with Shin Soon-ae.
+                            Shin Soon-ae decides to help both of them out by "borrowing" Na Bong-sun's body for a bit to try
+                            and hook up with the chef.
+                            It's hilarious and not as dirty as it sounds.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Doom At Your Service:</strong> Tak Dong-Kyung is diagnosed with brain cancer and told
+                            she only has 100 days left to live.
+                            That night,
+                            angry and drunk, she wishes on a star for the world to end and Myul-Mang, the god of
+                            destruction, shows up at
+                            her door only too happy to help.
+                            Myul-Mang promises that he will keep her from feeling any pain as she nears death and grant any
+                            wish she has, as
+                            long as she promises that
+                            her last wish will be for the world to end. If it isn't, then the person she loves the most will
+                            die in her
+                            place. Will she keep her word?
+                            Are there any other options?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Mystic Pop-up Bar:</strong> Han Kang-nae has had a rough life because whenever someone
+                            touches him they spontaneously confess their
+                            problems to him, no matter how personal. He meets Weol-ju, the mysterious owner of a pop-up bar,
+                            and her kitchen assistant,
+                            Chief Gwi, who, once they find out about Han Kang-bae's power, reveal their own magical
+                            abilities to travel into people's
+                            dreams. Weol-ju is on a deadline to settle the grudges of 100,000 souls and Han Kang-bae is just
+                            the right person to help her out.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Tomorrow:</strong> Choi Joon-woong saves a man from committing suicide and ends up in a
+                            coma. While in the hospital he is recruited onto a team of
+                            grim reapers whose job is to help save people who are about to kill themselves. Be prepared to
+                            cry, but it's soooo good!
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Racket Boys:</strong> Yoon Hae-kang is a city kid forced to move to the countryside so
+                            his dad can be the head coach of the school's
+                            struggling racketball team. On the verge of being disbanded, the boys are trying to win a local
+                            competition to save their team.
+                            Will Yoon Hae-kang help or not?
+
+                        </p>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div id="historical-synopses">
+                <h4>Historical</h4>
+                <ul>
+                    <li>
+                        <p>
+                            <strong>Rookie Historian Goo Hae Ryung:</strong> Goo Hae Ryung is one of the few women to become
+                            a historian in the king's court when she finds out the
+                            Crown Prince, Yi Rim, is secretly the other of a very popular, and very scandalous for the time,
+                            romance novel. Will she keep his secret?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>100 Days My Prince:</strong> To stop a drought all the single men and women in Joseon
+                            are forced to pair up and get married. Hong-shim is the unlucky
+                            odd-girl-out. In order to escape becoming a gross old guy's concubine, Hong shim convinces a man
+                            with amnesia, Lee Yul, that they were enaged.
+                            Little does she, or he, know that Lee Yul is actually the crown prince of Joseon!
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>The Matchmakers:</strong> Shim Jung-woo is forced to be single because was once
+                            betrothed to a princess who died during their wedding ceremony. He's now leading
+                            a secret double life as a matchmaker to support himself and is forced to work with Jung
+                            Soon-deok, a widow, to help get the older, single
+                            people married off.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Flower Crew:</strong> Lee Soo finds out he is the illegitimate son of the king when he's
+                            suddenly forced to take the throne and leave his fiance Gae-ttong behind.
+                            When told he must secure the future of Joseon by getting married, Lee Soo decides to hire
+                            Joseon's best match makers to fool everyone and
+                            turn Gae-ttong into a noblewoman.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Twenty-Five Twenty-One:</strong> The story of two young people and their friends as
+                            they all grow up and learn about life and love in the late 1990's during
+                            Korea's financial crisis.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <h4>Where to Watch</h4>
+            <p>
+                Netflix, Viki-Rakuten, and Youtube are all great sources for k-dramas. Pretty much all the ones I watch
+                are from one of those three sources.
+            </p>
+        </section>
+        <section id="video-container">
+            <h3>Watch Oh My Ghost Episode 1</h3>
+            <iframe width="320" height="180" src="https://www.youtube.com/embed/HwbwE5LK3lA?si=5miug9Mvs2_EZXwW"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </section>
+    </section>
+    <section id="contact-me" class="tabs" style="display:none">
+        <div id="social">
+            <div id="namjoon">
+                <img src="images/namjoon_crown.jpg">
+            </div>
+            <div id="contact-info">
+                <h2>Let's be social!</h2>
+                <p>
+                    You can find me in the CS building every Tuesday and Thursday in Room 305 from 2:3-3:45pm
+                </p>
+                <p>
+                    (as long as there's school that day)
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="form-container" class="tabs" style="display:none">
+        <div class="container">
+            <h1>Visitor Form</h1>
+            <div id="success" class="successMsg" style="display: none">
+                Thank you for logging your visit!
+            </div>
+            <form id="myform" novalidate method="GET" action="https://wp.zybooks.com/form-viewer.php">
+                <ul class="flex">
+                    <li class="section-display">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" required placeholder="Enter your first name here">
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name here">
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" placeholder="Enter your address here">
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" placeholder="Enter your city here">
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state" min="2" max="2" placeholder="Enter your state here">
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <label for="zip">Zip</label>
+                        <input type="text" id="zip" name="zip" placeholder="Enter your zip code here">
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" placeholder="Enter your email here">
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone" name="phone" placeholder="Enter your phone here">
+                        <div class="errorMsg"></div>
+                    </li>
+                </ul>
+                <h3 id="find-page-title">How did you find my page</h3>
+                <ul class="find-page">
+                    <li>
+                        <input type="checkbox" id="google" name="find-page" value="google">
+                        <label for="google">Google Search</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="friend" name="find-page" value="friend">
+                        <label for="friend">Friend</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="newspaper" name="find-page" value="newspaper">
+                        <label for="newspaper">Newspaper</label>
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <label for="comment">Comments</label>
+                        <textarea id="comment" rows="4" placeholder="Enter your comments here"></textarea>
+                    </li>
+
+                    <li>
+                        <button type="submit" id="submitBtn">Send</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <h5>@Copyright Okay Drama Queen! 2025</h5>
+    </footer>
+    <script defer src="js/validation.js"></script>                                  <!-- Defer makes it load after everything else on the page -->
+    <script defer src="js/main.js"></script>
+</body>
+
+</html>

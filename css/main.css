@@ -1,0 +1,347 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.coiny-regular {
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#header-container {
+    background-color: rgb(238, 220, 185);
+    border-bottom: 3px solid lightpink;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 3px solid rgb(150, 121, 105);
+    grid-area: header;
+
+}
+
+#header-logo {
+    display: flex;
+    align-items: center;
+}
+
+
+header img {
+    display: flex;
+    width: 140px;
+    height: auto;
+    margin: 3%
+}
+
+header h1 {
+    display: flex;
+    font-family: "Coiny", Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+
+#couple-photo {
+    display: flex;
+    height: 150px;
+    width: auto;
+}
+
+nav {
+    background-color: rgb(210, 180, 140);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-area: nav;
+    border-top: 3px solid rgb(150, 121, 105);
+}
+
+button {
+    background-color: rgb(210, 180, 140);
+    border: none;
+    width: 150px;
+}
+
+ button[type=submit] {
+    border: 2px solid rgb(150, 121, 105);
+    background-color: rgb(210, 180, 140);
+ }
+
+button:hover {
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.30), 0 15px 40px 0 rgba(0, 0, 0, 0.20);
+    background-color: rgb(210, 180, 140);
+}
+
+#home-container {
+    background-color: lightpink;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(5, auto);
+    border: 5px solid beige;
+    padding: 15px;
+    grid-template-areas: "header header header header header header header header header header"
+        "nav nav nav nav nav nav nav nav nav nav"
+        "main main main main main main aside aside aside aside"
+        "main main main main main main aside aside aside aside"
+        "footer footer footer footer footer footer footer footer footer footer"
+}
+
+#main-container {
+    border: 3px solid beige;
+    padding: 3%;
+    grid-area: main;
+}
+
+#modern {
+    padding-top: 1%;
+}
+
+#historical {
+    padding-top: 1%;
+    margin-bottom: 17%;
+}
+
+#aside-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 3px solid beige;
+    padding: 4% 3% 3% 3%;
+    grid-area: aside;
+}
+
+#aside-container p {
+    margin-top: -10px;
+}
+
+img {
+    align-content: center;
+    width: 200px;
+    height: auto;
+    grid-area: star;
+
+}
+
+#aside-container>ol {
+    grid-area: list;
+}
+
+#actress-content,
+#actor-content {
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: 2;
+    /* align-items: center; */
+    grid-template-areas:
+        "star list"
+}
+
+.caption img {
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, 
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: whitesmoke;
+}
+
+#synopses-container {
+    padding: 15px;
+    border: 3px solid lightpink;
+}
+
+.descriptions {
+    padding: 2%;
+    border: 3px solid lightpink;
+    padding-right: 7%;
+    background-color: rgb(193, 225, 193);
+}
+
+.video-container {
+    margin-top: 5%;
+    padding-left: 1%;
+}
+
+#contact-me {
+    border: 3px solid lightpink;
+    /* padding-top: 2%; */
+    /* padding-bottom: 10%; */
+    text-align: center;
+}
+
+#social {
+    display: flex;
+    justify-content: center;
+    padding-right: 3%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    border: 3px solid lightpink;
+    background-color: rgb(193, 225, 193);
+    margin: 15px;
+}
+
+#contact-info {
+    text-align: left;
+    padding: 2% 5% 0% 5%;
+}
+
+#namjoon img {
+    border-radius: 5px;
+}
+
+.descriptions > h2,
+#contact-info > h2 {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-style: wavy;
+    text-decoration-color: tan;
+    text-decoration-skip-ink: none;
+}
+
+.descriptions > h2 {
+    text-decoration-thickness: 4px;
+    text-decoration-style: solid;
+}
+
+/* Form CSS */
+#form-container, .container {
+    padding: 15px;
+    border: 3px solid lightpink;
+}
+
+.container {
+    background-color:rgb(193, 225, 193)
+}
+
+#myform {
+    margin-top: 2%;
+}
+
+#find-page-title {
+    margin: 5% 0 2% 0;
+}
+
+.flex label {
+    display: inline-block;
+    width: 10%;
+    padding: 0 0 1% 0;
+}
+
+.find-page label {
+    margin: 0 0 3% 0;
+}
+
+input[type=text] {
+    width: 25%;
+}
+
+.flex, .find-page {
+    list-style-type: none;
+}
+
+input[type=text]:focus {
+    outline: none;
+    border: 3px solid rgb(210, 180, 140);
+}
+
+/* Styling checkboxes */
+input[type=checkbox] + label {
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    appearance: none;
+    margin: 0;
+}
+
+input[type=checkbox] + label::before {
+    content: "\00a0";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    line-height: 1em;
+    font-size: 1em;
+    margin-right: 10px;
+    background-color: whitesmoke;
+    border: .125em solid lightpink;
+    margin-bottom: 1%;
+}
+
+input[type=checkbox]:checked + label::before {
+    content: "\1F338";
+    color: lightpink;
+    background: whitesmoke;
+}
+
+.find-page li:nth-child(4) {
+    margin-top: 3%;
+}
+
+textarea {
+    display: block;
+    box-sizing: border-box;
+    margin: 2% 0 5% 0;
+    width: 35%;
+}
+
+textarea:focus {
+    outline: none;
+    border: 3px solid rgb(210, 180, 140);
+}
+
+footer {
+   color:sienna;
+   text-align: center;
+}
+
+@media (max-width: 768px) {
+    #home-container {
+    grid-template-areas: "header header header header header header header header header header"
+            "nav nav nav nav nav nav nav nav nav nav"
+            "main main main main main main main main main main"
+            "main main main main main main main main main main"
+            "aside aside aside aside aside aside aside aside aside aside"
+            "aside aside aside aside aside aside aside aside aside aside"
+            "footer footer footer footer footer footer footer footer footer footer"
+    }
+    
+    #social {
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: center;
+        padding-right: none;
+        padding-top: none;
+        padding-bottom: none;
+        justify-items: center;
+        align-items: center;
+    }
+
+    #actress-content,
+    #actor-content {
+        display: grid;
+        grid-template-columns: 1;
+        align-items: center;
+        grid-template-areas:
+            "star"
+            "list"
+    }
+
+    #namjoon {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #contact-info {
+        text-align: center;
+        padding: none;
+    }
+
+}
