@@ -29,7 +29,7 @@ const stateAbbreviations = [
 // let form = null;
 let successMsg = null;
 
-function initValidation(formID, successId) { 
+function initValidation(formId, successId) { 
     form = document.getElementById(formId);
     successMsg = document.getElementById(successId);
 
