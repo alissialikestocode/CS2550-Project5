@@ -156,7 +156,6 @@ function setElementValidity(id, valid, message) {
 
     if (valid) {                        // It has a value
         el.setCustomValidity('');       // Sets to no error msg and field is valid
-        // errorDiv.innerHTML = "";
     }
     else {
         el.setCustomValidity(message);  // Sets error msg and field gets invalid state

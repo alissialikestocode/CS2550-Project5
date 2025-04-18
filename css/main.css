@@ -334,9 +334,9 @@ input.was-validated:valid~div {
     display: block;
 }
 
-/* /* hide all error divs 
+/* hide all error divs 
 ~ is the general sibling selector and selects 'div' siblings of the input*/
-input:valid~div {
+/* input:valid~div {
     display: none;
 }
 
