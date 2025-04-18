@@ -107,5 +107,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
     console.log("before initValidation");
 
     initValidation("myform", "successMsg");
-    console.logI("after initValidation");
+    console.log("after initValidation");
 });
