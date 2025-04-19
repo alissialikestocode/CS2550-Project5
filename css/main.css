@@ -326,7 +326,7 @@ input:invalid~div {
 /* Valid input */
 /*only show error information when 'was-validated' class is added to the input*/
 input.was-validated:valid {
-    border: 2px solid green;
+    border: 5px solid green;
 }
 
 input.was-validated:valid~div {
