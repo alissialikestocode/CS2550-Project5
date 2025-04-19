@@ -160,6 +160,6 @@ function setElementValidity(id, valid, message) {
     else {
         el.setCustomValidity(message);  // Sets error msg and field gets invalid state
 
-        console.log(errorDivColl.nextElementSibling);
+        console.log(el.nextElementSibling.message);
     }
 }
