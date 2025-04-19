@@ -104,8 +104,5 @@ function toggleStylesheet(href, onoff) {
 
 // Entry point for js validation, happens after everything has been loaded/rendered on page
 document.addEventListener("DOMContentLoaded", function(event) {
-    console.log("before initValidation");
-
     initValidation("myform", "successMsg");
-    console.log("after initValidation");
 });

@@ -1,5 +1,4 @@
 /*   
- 
 Project:  Project 5
 Name: Alissia Austell Huntzinger
 Submitted: 4/18/25
@@ -11,8 +10,13 @@ or leaving my code on a public web site constitutes cheating.
 I acknowledge that  If I am found in violation of this policy this may result
 in a zero grade, a permanent record on file and possibly immediate failure of the class.
  
-Reflection (1-2 paragraphs):  I really enjoyed writing this program, but had trouble with blah blah blah.  
- 
+Reflection (1-2 paragraphs):  I really wanted to enjoy doing this project, and felt confident
+    doing into it after the lab, but the instructions were all over the place and pretty unclear. 
+    I don't like that I'm just supposed to stare at a replit for hours trying to make sense of it.
+    And for how structured html is supposed to be the formatting of the instructions is so jumbled
+    and hard to read. I spent a lot of time worried that I wasn't supposed to choose between implementing onClick
+    or onSubmit and that I hadn't understood the assignment at all. Instead of feelling proud of how
+    far I've come in this class I feel frustrated and angry and am wondering if I even learned anything at all.
 */
 
 // Establish global variables for validating
@@ -155,15 +159,16 @@ function checkRequired(id, message) {
 
 function setElementValidity(id, valid, message) { 
     let el = document.getElementById(id);
+    let errorDiv = el.parentElement.querySelector(".errorMsg");
 
     if (valid) {                        // It has a value
         el.setCustomValidity("");       // Sets to no error msg and field is valid
-        // errorDiv.innerHTML = "";
-        // errorDiv.style.display = "none";
+        if (errorDiv.innerHTML) { 
+            errorDiv.innerHTML = "";
+        }
     }
     else {
         el.setCustomValidity(message);  // Sets error msg and field gets invalid state
-        let errorDiv = el.parentElement.querySelector(".errorMsg");
         errorDiv.innerHTML = message; 
     }
 }
