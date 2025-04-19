@@ -18,7 +18,7 @@ Reflection (1-2 paragraphs):  I really enjoyed writing this program, but had tro
 // Establish global variables for validating
 let phoneRegex = /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;        // regex sourced from https://uibakery.io/regex-library/phone-number
 let emailRegex = /[\w]*@[\w]*.{1}(com|gov|edu|io|net){1}/;
-let zipCodeRegex = /(?<zip1>\d{5})([-]?(?<zip2>\d{4}))?(?<ERROR>.+)?/
+let zipCodeRegex = /(?<zip1>\d{5})([-]?(?<zip2>\d{4}))?(?<ERROR>.+)?/;
 const stateAbbreviations = [
     'AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FM', 'FL', 'GA',
     'GU', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MH', 'MD', 'MA',
