@@ -27,7 +27,7 @@ const stateAbbreviations = [
     'VT', 'VI', 'VA', 'WA', 'WV', 'WI', 'WY'
 ];
 // let form = null;
-let successMsg = document.getElementById("success");
+let successMsg = null;
 
 function initValidation(formId, successId) {
 
@@ -54,6 +54,7 @@ function inputChanged(ev) {             // When the input is changed add "was-va
 function submitForm(ev) {
     console.log("in submit");
     let form = ev.currentTarget;
+    let successMsg = document.getElementById("success");
 
     ev.preventDefault();                    // Use these to stop the form from submitting
     ev.stopPropagation();
