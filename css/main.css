@@ -215,6 +215,10 @@ a:hover {
     border: 3px solid lightpink;
 }
 
+.success {
+    font-family: "Coiny", Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
 .container {
     background-color:rgb(193, 225, 193);
     display: flex;
