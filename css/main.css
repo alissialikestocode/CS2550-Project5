@@ -223,8 +223,16 @@ a:hover {
     width: 100%;
 }
 
-#myform {
-    margin-top: 2%;
+/* #myform{
+    background-color: green;
+} */
+
+#checkbox-part {
+    background-color: rgb(193, 225, 193);
+    /* background-color: blue; */
+    padding: 15px;
+    border: 3px solid lightpink;
+    margin-top: 1%;
 }
 
 #find-page-title {
