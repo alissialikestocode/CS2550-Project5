@@ -115,7 +115,7 @@ function checkFormat(id, msg, regex) {
     let elemVal = document.getElementById(id).value;
     
     const result = regex.test(elemVal);
-    if (!result) { 
+    if (result) { 
         valid = true;
     }
 
