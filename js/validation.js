@@ -136,7 +136,6 @@ function checkRequired(id, message) {
     let type = el.type;
     switch (type) {
         case 'text':
-        case 'password':
             if (el.value.trim() != "") {
                 valid = true;
             }
