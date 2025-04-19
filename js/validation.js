@@ -82,15 +82,15 @@ function validateForm() {
     }
 
     if (checkRequired("email", "Email Address is required")) {
-        checkFormat("email", "email format is bad", emailRegex)
+        checkFormat("email", "email format is bad", emailRegex);
     }
 
     if (checkRequired("zip", "Zip Code is Required")) {
-        checkFormat("zip", `malformed zip-code, please use either "#####", or "#####-#### format.`, zipCodeRegex)
+        checkFormat("zip", `malformed zip-code, please use either "#####", or "#####-#### format.`, zipCodeRegex);
     }
 
     if (checkRequired("phone", "Phone is required")) {
-        checkFormat("phone", "phone format is bad", phoneRegex)
+        checkFormat("phone", "phone format is bad", phoneRegex);
     }
 
     checkRequired("newspaper", "you must select at least one!");
