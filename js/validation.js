@@ -159,7 +159,6 @@ function setElementValidity(id, valid, message) {
     }
     else {
         el.setCustomValidity(message);  // Sets error msg and field gets invalid state
-
-        console.log(el.nextElementSibling.message);
     }
+    el.parentElement.querySelector(".errorMsg");
 }
