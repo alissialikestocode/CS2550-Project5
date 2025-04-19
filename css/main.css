@@ -323,10 +323,6 @@ input:invalid~div {
     display: none;
 }
 
-input:invalid~div {
-    display: none;
-} */
-
 @media (max-width: 768px) {
     #home-container {
     grid-template-areas: "header header header header header header header header header header"
