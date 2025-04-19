@@ -323,23 +323,6 @@ input:invalid~div {
     display: none;
 }
 
-/* Valid input */
-/*only show error information when 'was-validated' class is added to the input*/
-input:valid {
-    color: green;
-    border: 1px solid green;
-}
-
-input.was-validated:valid~div {
-    display: block;
-}
-
-/* hide all error divs 
-~ is the general sibling selector and selects 'div' siblings of the input*/
-/* input:valid~div {
-    display: none;
-}
-
 input:invalid~div {
     display: none;
 } */
