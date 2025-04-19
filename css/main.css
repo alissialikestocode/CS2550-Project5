@@ -306,7 +306,7 @@ footer {
 /*only show error information when 'was-validated' class is added to the input*/
 input.was-validated:invalid {
     color: red;
-    border: 3px solid red;
+    border: 2px solid red;
 }
 
 input.was-validated:invalid~div {
@@ -326,7 +326,7 @@ input:invalid~div {
 /* Valid input */
 /*only show error information when 'was-validated' class is added to the input*/
 input.was-validated:valid {
-    border: 3px solid green;
+    border: 2px solid green;
 }
 
 input.was-validated:valid~div {
