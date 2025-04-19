@@ -59,6 +59,7 @@ function submitForm(ev) {
     console.log("in submit");
     let form = ev.currentTarget;
     let successMsg = document.getElementById("success");
+    let checkboxContainer = document.getElementById("checkbox-part");
     
 
     ev.preventDefault();                    // Use these to stop the form from submitting
@@ -74,6 +75,7 @@ function submitForm(ev) {
     }
     else {
         form.style.display = "none";
+        checkboxContainer.style.display = "none";
         successMsg.style.display = "block";
     }
 }
