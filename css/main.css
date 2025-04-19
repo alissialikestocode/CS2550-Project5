@@ -223,15 +223,21 @@ a:hover {
     width: 100%;
 }
 
-/* #myform{
-    background-color: green;
-} */
+.flex {
+    /* background-color: purple; */
+    width: 100%;
+}
+#myform{
+    /* background-color: green; */
+    width: 100%;
+}
 
 #checkbox-part {
     background-color: rgb(193, 225, 193);
     /* background-color: blue; */
     padding: 15px;
     border: 3px solid lightpink;
+    width: 100%;
     margin-top: 1%;
 }
 
