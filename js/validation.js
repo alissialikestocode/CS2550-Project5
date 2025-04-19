@@ -27,7 +27,7 @@ const stateAbbreviations = [
     'VT', 'VI', 'VA', 'WA', 'WV', 'WI', 'WY'
 ];
 // let form = null;
-let successMsg = null;
+let successMsg = document.getElementById("success");
 
 function initValidation(formId, successId) {
 
