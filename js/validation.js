@@ -68,6 +68,7 @@ function submitForm(ev) {
     }
     else {
         form.style.display = "none";
+        successMsg.style.display = "block";
     }
 }
 
