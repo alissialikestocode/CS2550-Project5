@@ -216,7 +216,8 @@ a:hover {
 }
 
 .container {
-    background-color:rgb(193, 225, 193)
+    background-color:rgb(193, 225, 193);
+    display: flex;
 }
 
 #myform {

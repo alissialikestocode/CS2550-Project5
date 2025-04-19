@@ -313,12 +313,13 @@ makes it so easy to miss things. This was NOT ENJOYABLE and makes me dread havin
     </section>
     <section id="form-container" class="tabs" style="display:none">
         <div class="container">
-            <h1>Visitor Form</h1>
-            <div id="success" class="successMsg" style="display: none">
-                Thank you for logging your visit!
-            </div>
-            <form id="myform" novalidate method="GET" action="https://wp.zybooks.com/form-viewer.php">
-                <ul class="flex">
+            <div id="text-input"></div>
+                <h1>Visitor Form</h1>
+                <div id="success" class="successMsg" style="display: none">
+                    Thank you for logging your visit!
+                </div>
+                <form id="myform" novalidate method="GET" action="https://wp.zybooks.com/form-viewer.php">
+                    <ul class="flex">
                     <li class="section-display">
                         <label for="first-name">First Name</label>
                         <input type="text" id="first-name" name="first-name" required placeholder="Enter your first name here">
@@ -360,30 +361,33 @@ makes it so easy to miss things. This was NOT ENJOYABLE and makes me dread havin
                         <div class="errorMsg"></div>
                     </li>
                 </ul>
-                <h3 id="find-page-title">How did you find my page</h3>
-                <ul class="find-page">
-                    <li>
-                        <input type="checkbox" id="google" name="find-page" value="google">
-                        <label for="google">Google Search</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="friend" name="find-page" value="friend">
-                        <label for="friend">Friend</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="newspaper" name="find-page" value="newspaper">
-                        <label for="newspaper">Newspaper</label>
-                        <div class="errorMsg"></div>
-                    </li>
-                    <li>
-                        <label for="comment">Comments</label>
-                        <textarea id="comment" rows="4" placeholder="Enter your comments here"></textarea>
-                    </li>
+            </div>
+                <div id="checkbox-input">
+                    <h3 id="find-page-title">How did you find my page</h3>
+                    <ul class="find-page">
+                        <li>
+                            <input type="checkbox" id="google" name="find-page" value="google">
+                            <label for="google">Google Search</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="friend" name="find-page" value="friend">
+                            <label for="friend">Friend</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="newspaper" name="find-page" value="newspaper">
+                            <label for="newspaper">Newspaper</label>
+                            <div class="errorMsg"></div>
+                        </li>
+                        <li>
+                            <label for="comment">Comments</label>
+                            <textarea id="comment" rows="4" placeholder="Enter your comments here"></textarea>
+                        </li>
 
-                    <li>
-                        <button type="submit" id="submitBtn">Send</button>
-                    </li>
-                </ul>
+                        <li>
+                            <button type="submit" id="submitBtn">Send</button>
+                        </li>
+                    </ul>
+                </div>
             </form>
         </div>
     </section>
