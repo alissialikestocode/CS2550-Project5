@@ -160,7 +160,7 @@ function setElementValidity(id, valid, message) {
     else {
         el.setCustomValidity(message);  // Sets error msg and field gets invalid state
 
-        let errorDiv = document.getElementsByClassName("errorMsg");
-        errorDiv.innerHTML = `<p>${message}</p>`;
+        let errorDivColl = document.getElementsByClassName("errorMsg");
+        errorDivColl[0].innerHTML = message;
     }
 }
