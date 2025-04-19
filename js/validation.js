@@ -152,7 +152,7 @@ function checkRequired(id, message) {
 
 function setElementValidity(id, valid, message) { 
     let el = document.getElementById(id);
-    let errorDivColl = document.getElementsByClassName("errorMsg");
+    // let errorDivColl = document.getElementsByClassName("errorMsg");
 
     if (valid) {                        // It has a value
         el.setCustomValidity('');       // Sets to no error msg and field is valid
@@ -160,5 +160,6 @@ function setElementValidity(id, valid, message) {
     else {
         el.setCustomValidity(message);  // Sets error msg and field gets invalid state
     }
-    el.parentElement.querySelector(".errorMsg");
+    let errorDiv = el.parentElement.querySelector(".errorMsg");
+    errorDiv.innerHTML = message;
 }
