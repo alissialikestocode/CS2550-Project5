@@ -54,7 +54,7 @@ function inputChanged(ev) {             // When the input is changed add "was-va
 function submitForm(ev) {
     console.log("in submit");
     let form = ev.currentTarget;
-    // let successMsg = document.getElementById("success");
+    
 
     ev.preventDefault();                    // Use these to stop the form from submitting
     ev.stopPropagation();
@@ -69,7 +69,8 @@ function submitForm(ev) {
     }
     else {
         form.style.display = "none";
-        // successMsg.style.display = "block";
+        let successMsg = document.getElementById("success");
+        successMsg.style.display = "block";
     }
 }
 
