@@ -323,6 +323,16 @@ input:invalid~div {
     display: none;
 }
 
+/* Valid input */
+/*only show error information when 'was-validated' class is added to the input*/
+input.was-validated:valid {
+    border: 1px solid green;
+}
+
+input.was-validated:valid~div {
+    display: block;
+}
+
 @media (max-width: 768px) {
     #home-container {
     grid-template-areas: "header header header header header header header header header header"
