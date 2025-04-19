@@ -233,7 +233,7 @@ a:hover {
 .flex label {
     display: inline-block;
     /* width: 10%; */
-    width: 50%;
+    width: 30%;
     padding: 0 0 1% 0;
 }
 
@@ -243,7 +243,7 @@ a:hover {
 
 input[type=text] {
     /* width: 25%; */
-    width: 50%;
+    width: 75%;
 }
 
 .flex, .find-page {
